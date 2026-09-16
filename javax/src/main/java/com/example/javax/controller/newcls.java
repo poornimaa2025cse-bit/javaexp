@@ -7,16 +7,12 @@ import java.util.List;
 @RestController
 public class newcls{
 
-    // Data-va store panna oru simple list
+    
     List<String> list = new ArrayList<>();
-
-    // GET: Data-va pakkaradhukku
     @GetMapping("/items")
     public List<String> getItems() {
         return list;
     }
-
-    // POST: Puthiya data-va add panradhukku
     @PostMapping("/items")
     public String addItem(@RequestBody String item) {
         list.add(item);
